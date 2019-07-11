@@ -1,0 +1,108 @@
+<p class="lead">
+    <a ui-sref="^.list" class="btn btn-large btn-default">
+        <i class="glyphicon glyphicon-arrow-left"></i>
+    </a>
+    <a ng-click="save()" href="" class="btn btn-default pull-right">
+        <i class="glyphicon glyphicon-floppy-save"></i>
+    </a>
+</p>
+
+<div class="row">
+    <form class="validate">
+        <div class="col-md-2">
+            <h2>Broj kola:</h2>
+            <input type="number" min="1" max="1000" class="form-control stepper" id="roundNumber" name="roundNumber" ng-model="fixture.roundNumber" placeholder="Unesite broj kola" required>
+        </div>
+    </form>
+</div>
+<br>
+
+<div class="row">
+<div class="form-group col-md-4 margin-left-50">
+    <select class="form-control" id="homeTeamName" name="homeTeamName" ng-model="team1.id">
+        <option value="">--- Odaberi fakultet ---</option>
+        <option ng-repeat="team in teams" value="{{ team.id }}">{{ team.teamName }}</option>
+    </select>
+</div>
+<div class="col-md-1">
+    <div class="form-group"> <!-- this should represent "goalsScored" for the "home team", and "goalsConceeded" for the "away" team -->
+        <input class="form-control" id="goalsScoredHome" name="goalsScoredHome" ng-model="fixture.homeTeamGoalsScored" placeholder="Unesi broj golova domaćina">
+    </div>
+</div>
+<div class="form-group col-md-4 margin-left-50">
+    <select class="form-control" id="awayTeamName" name="awayTeamName" ng-model="team2.id">
+        <option value="">--- Odaberi fakultet ---</option>
+        <option ng-repeat="team in teams" value="{{ team.id }}">{{ team.teamName }}</option>
+    </select>
+</div>
+<div class="col-md-1">
+    <div class="form-group">
+        <input class="form-control" id="goalsScoredAway" name="goalsScoredAway" ng-model="fixture.awayTeamGoalsScored" placeholder="Unesi broj golova gosta">
+    </div>
+</div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="col-md-12">
+            <table id="homeTeamList" dt-column-defs="dtColumnDefs" datatable="ng" dt-options="dtOptions" class="table table-hover table-striped table-bordered" width="100%" ng-controller="PlayersListCtrl">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Ime i prezime</th>
+                    <th>Golovi</th>
+                    <th>Žuti</th>
+                    <th>Crveni</th>
+                    <th>Nije igrao</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="player in players1">
+                    <td>{{$index +1}}</td>
+                    <td>{{ player.firstName }} {{ player.lastName }}</td>
+                    <td><input type="number" style="width: 100%;" placeholder="Broj Golova" ng-model="player.goal"></td>
+                    <td><input type="number" style="width: 100%;" placeholder="Broj Zutih" ng-model="player.yellow"></td>
+                    <td><input type="number" style="width: 100%;" placeholder="Broj Crvenih" ng-model="player.red"></td>
+                    <td><button ng-click="deletePlayer1($index)">Nije igrao</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="col-md-12">
+            <table id="awayTeamList" dt-column-defs="dtColumnDefs" datatable="ng" dt-options="dtOptions" class="table table-hover table-striped table-bordered" width="100%" ng-controller="PlayersListCtrl">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Ime i prezime</th>
+                    <th class="col-md-2">Golovi</th>
+                    <th>Žuti</th>
+                    <th>Crveni</th>
+                    <th>Nije igrao</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="player in players2">
+                    <td>{{$index +1}}</td>
+                    <td>{{ player.firstName }} {{ player.lastName }}</td>
+                    <td><input type="number" style="width: 100%;" placeholder="Broj Golova" ng-model="player.goal"></td>
+                    <td><input type="number" style="width: 100%;" placeholder="Broj Zutih" ng-model="player.yellow"></td>
+                    <td><input type="number" style="width: 100%;" placeholder="Broj Crvenih" ng-model="player.red"></td>
+                    <td><button ng-click="deletePlayer2($index)">Nije igrao</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+<p class="lead">
+    <a ui-sref="^.list" class="btn btn-large btn-default">
+        <i class="glyphicon glyphicon-arrow-left"></i>
+    </a>
+    <a ng-click="save()" href="" class="btn btn-default pull-right">
+        <i class="glyphicon glyphicon-floppy-save"></i>
+    </a>
+</p>
+
+
+<div class="row">
+    <div class="form-group col-md-4 margin-left-50">
+        <select class="form-control" id="roundNumber" name="roundNumber" ng-model="fixture.roundNumber">
+            <option value="">--- Odaberi kolo ---</option>
+            <option ng-repeat="fixture in fixtures" value="{{ roundNumber }}">{{ fixture.roundNumber }}</option>
+        </select>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="col-md-12">
+            <table id="roundResults" dt-column-defs="dtColumnDefs" datatable="ng" dt-options="dtOptions" class="table table-hover table-striped table-bordered" width="100%" ng-controller="FixturesListCtrl">
+                <thead>
+                <tr>
+                    <th>Kolo</th>
+                    <th>Tim 1</th>
+                    <th>Tim 2</th>
+                    <th class="col-md-2">Rezultat</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="fixture in fixtures | filter:roundNumber">
+                    <td>{{fixture.roundNumber}}</td>
+                    <td>{{fixture.homeTeamName}}</td>
+                    <td>{{fixture.awayTeamName}}</td>
+                    <td>{{ fixture.homeTeamGoalsScored }}:{{ fixture.awayTeamGoalsScored }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

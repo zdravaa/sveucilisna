@@ -1,0 +1,86 @@
+    <h3>Sponzori</h3>
+
+    <div class="row">
+
+        <div>
+            <div class="clearfix" ng-if="$index % 5 == 0"></div>
+            <!-- Box -->
+            <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+                <div class="offer_tumb" type="button">
+
+                    <a href="https://www.facebook.com/studentskizbor/" target="_blank">
+
+                        <img class="img-responsive showImg" src="assets/images/logo-studentski-zbor.jpg" alt="" />
+
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+                <div class="offer_tumb" type="button">
+
+                    <a href="http://crosig.ba/" target="_blank">
+
+                        <img class="img-responsive showImg" src="assets/images/logo-croatia-osiguranje.png" alt="" />
+
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+                <div class="offer_tumb" type="button">
+
+                    <a href="http://phon.qpon/" target="_blank">
+
+                        <img class="img-responsive showImg" src="assets/images/transparent-phonqpon.png" alt="" />
+
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+                <div class="offer_tumb" type="button">
+
+                    <a href="http://www.leda.ba/" target="_blank">
+
+                        <img class="img-responsive showImg" src="assets/images/logo-leda.png" alt="" />
+
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+                <div class="offer_tumb" type="button">
+
+                    <a href="http://fitnet.io/" target="_blank">
+
+                        <img class="img-responsive showImg" src="assets/images/Fitnet_logo_white_background.png" alt="" />
+
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+
+                <h2>KONTAKT</h2>
+
+                <h4 class="letter-spacing-1">Pratite nas na:</h4>
+
+                <div class="margin-top-20">
+                    <a href="https://www.facebook.com/SveucilisnamalonogometnaligaSveucilisteuMostaru/" target="_blank" class="social-icon social-icon-border social-facebook pull-left" data-toggle="tooltip" data-placement="top" title="Facebook">
+
+                        <i class="icon-facebook"></i>
+                        <i class="icon-facebook"></i>
+                    </a>
+                </div>
+
+
+            </div>
+            <!-- /Box -->
+        </div>
+    </div>

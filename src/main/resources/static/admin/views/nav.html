@@ -1,0 +1,23 @@
+<section class="page-header page-header-xs">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-6 margin-left-50">
+                <h1 translate="HEAD_ADMINISTRATION"></h1>
+                <!-- page tabs -->
+                <ul class="page-header-tabs list-inline">
+                    <li><a href="#users" data-toggle="tab">Users</a></li>
+                    <li><a href="#teams" data-toggle="tab">Teams</a></li>
+                    <li><a href="#players" data-toggle="tab">Players</a></li>
+                    <li><a href="#fixtures" data-toggle="tab">Fixtures</a></li>
+                </ul><!-- /page tabs -->
+            </div>
+
+            <ul class="nav navbar-nav navbar-right" ng-controller="LoginCtrl">
+                <li ng-if="!loggedIn()"><a><span class="glyphicon glyphicon-user"></span> Login</a></li>
+                <li ng-if="loggedIn()" ng-click="logout()"><a><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+            </ul>
+
+        </div>
+    </div>
+</section>

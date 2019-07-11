@@ -1,0 +1,37 @@
+<p class="lead">
+    <a ui-sref="^.list" class="btn btn-large btn-default">
+        <i class="glyphicon glyphicon-arrow-left"></i>
+    </a>
+    <a ng-click="save()" href="" class="btn btn-default pull-right">
+        <i class="glyphicon glyphicon-floppy-save"></i>
+    </a>
+</p>
+
+<div class="form-group">
+    <input class="form-control" id="name" name="name" ng-model="team.teamName" placeholder="name">
+</div>
+<div class="form-group">
+    <input class="form-control" id="points" name="points" ng-model="team.points" placeholder="points">
+</div>
+<div class="form-group">
+    <input class="form-control" id="goalsScored" name="goalsScored" ng-model="team.goalsScored" placeholder="Goals scored">
+</div>
+<div class="form-group">
+    <input class="form-control" id="goalsConceded" name="goalsConceded" ng-model="team.goalsConceded" placeholder="Goals conceded">
+</div>
+<div class="form-group">
+    <input class="form-control" id="gamesPlayed" name="gamesPlayed" ng-model="team.gamesPlayed" placeholder="Games played">
+</div>
+
+
+
+<hr>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        {{team.name}}
+    </div>
+    <div class="panel-body">
+        <pre>{{team.street}}</pre>
+    </div>
+</div>

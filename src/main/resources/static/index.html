@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-US" xmlns:background-size="http://www.w3.org/1999/xhtml"
+      xmlns:background-repeat="http://www.w3.org/1999/xhtml" xmlns:background-position="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>Sveučilišna liga</title>
+    <meta name="description" content="" />
+    <meta name="Fitnet Digital" content="[www.fitnet-online.com]" />
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+    <!-- WEB FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+    <link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+    <link href="assets/css/color_scheme/darkblue.css" rel="stylesheet" type="text/css" id="color_scheme" />
+    <link href="assets/css/my.css" rel="stylesheet" type="text/css">
+
+    <!-- CSS ngProgress -->
+    <link rel="stylesheet" href="bower_components/ngprogress/ngProgress.css">
+
+    <!-- Owl carousel -->
+    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl.theme.css">
+
+
+<body ng-app="sveucilisnaPublic" bgcolor="gray" background="assets/images/shutterstock_110918564.v1.jpg" background-size:cover; background-repeat:no-repeat; background-position:center center;>
+
+<!-- WRAPPER -->
+<div id="wrapper" class="clearfix">
+
+    <!-- here you will include your nav, header, etc.. -->
+
+    <div ng-include="'public/views/header.html'"></div>
+
+    <!--<div ng-include="'public/views/nav.html'"></div>-->
+
+    <!-- MIDDLE, CONTENT -->
+
+
+    <div id="middle">
+        <div ui-view ng-view=""></div>
+    </div>
+
+</div>
+
+
+<footer id="footer" ng-include="'public/views/footer.html'"></footer>
+
+
+
+<script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/json3/lib/json3.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/lodash/dist/lodash.compat.js"></script>
+<script src="bower_components/restangular/dist/restangular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+<script src="bower_components/ngprogress/build/ngprogress.min.js"></script>
+<script src="bower_components/ngstorage/ngStorage.min.js"></script>
+
+<script type="text/javascript" src="public/app.js"></script>
+<script type="text/javascript" src="public/factory.js"></script>
+<script type="text/javascript" src="public/controllers/main.js"></script>
+<script type="text/javascript" src="public/controllers/players.js"></script>
+<script type="text/javascript" src="public/controllers/teams.js"></script>
+<script type="text/javascript" src="public/controllers/fixtures.js"></script>
+<script type="text/javascript" src="public/controllers/upcomingFixtures.js"></script>
+
+<script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+<!--<script type="text/javascript" src="public/controllers/login.js"></script>
+<script type="text/javascript" src="public/services/auth.js"></script>-->
+</body>
+</html>

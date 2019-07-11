@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service name="FixtureController">
+
+    <description>
+        Simple implementation of a Fixture controller.
+    </description>
+
+    <parameter name="ServiceClass">com.fitnet.sveucilisna.controllers.FixtureController</parameter>
+
+    <operation name="createFixture" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://localhost:8080/xsd">
+        <actionMapping>http://localhost:8080/xsd/createFixture</actionMapping>
+        <messageReceiver class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" />
+    </operation>
+
+    <operation name="getAllFixtures" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://localhost:8080/xsd">
+        <actionMapping>http://localhost:8080/xsd/getAllFixtures</actionMapping>
+        <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+    </operation>
+
+    <operation name="getFixture" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://localhost:8080/xsd">
+        <actionMapping>http://localhost:8080/xsd/getFixture</actionMapping>
+        <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+    </operation>
+
+</service>

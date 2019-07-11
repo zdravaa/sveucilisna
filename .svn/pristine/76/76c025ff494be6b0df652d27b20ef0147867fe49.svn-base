@@ -1,0 +1,49 @@
+<wsdl:description xmlns:wsdl="http://www.w3.org/ns/wsdl"
+                  targetNamespace="http://localhost:8081/fixtures/wsdl"
+                  xmlns:tns="http://localhost:8081/fixtures/wsdl"
+                  xmlns:whttp="http://www.w3.org/ns/wsdl/http"
+                  xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions"
+                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                  xmlns:msg="http://localhost:8081/fixtures/xsd">
+    <wsdl:documentation>
+        This is a WSDL 2.0 description of a service
+        listing a certain fixture data.
+    </wsdl:documentation>
+
+    <wsdl:types>
+        <xs:import namespace="http://localhost:8081/fixtures/xsd"
+                   schemaLocation="getFixtureById.xsd"/>
+    </wsdl:types>
+
+    <wsdl:interface name="FixtureListInterface">
+        <wsdl:operation name="getFixtureData"
+                        pattern="http://www.w3.org/ns/wsdl/in-out"
+                        style="http://www.w3.org/ns/wsdl/style/iri"
+                        wsdlx:safe="true">
+            <wsdl:documentation>
+                This operation returns fixture data.
+            </wsdl:documentation>
+            <wsdl:input element="msg:getFixtureData"/>
+            <wsdl:output element="msg:fixtureData"/>
+        </wsdl:operation>
+    </wsdl:interface>
+
+    <wsdl:binding name="FixtureDataHTTPBinding"
+                  type="http://www.w3.org/ns/wsdl/http"
+                  interface="tns:FixtureListInterface">
+        <wsdl:documentation>
+            The RESTful HTTP binding for the fixture data service.
+        </wsdl:documentation>
+        <wsdl:operation ref="tns:getFixtureData" whttp:method="GET"/>
+    </wsdl:binding>
+
+    <wsdl:service name="FixtureData" interface="tns:FixtureListInterface">
+        <wsdl:documentation>
+            Fixture data service.
+        </wsdl:documentation>
+        <wsdl:endpoint name="FixtureDataHTTPEndpoint"
+                       binding="tns:FixtureDataHTTPBinding"
+                       address="http://localhost:8081/fixtures/">
+        </wsdl:endpoint>
+    </wsdl:service>
+</wsdl:description>

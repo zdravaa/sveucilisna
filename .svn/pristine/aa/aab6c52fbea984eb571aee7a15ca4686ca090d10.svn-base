@@ -1,0 +1,143 @@
+<!-- Desktop view -->
+<form class="sky-form boxed margin-top-3 show">
+
+
+
+
+    <fieldset class="nomargin">
+
+        <p style="font-size:3vw;">Sljedeće kolo</p>
+        <table id="employeeListTable3" dt-column-defs="dtColumnDefs" datatable="ng" dt-options="dtOptions" class="table table-hover table-striped table-bordered customTable" width="100%" ng-controller="UpcomingFixturesListCtrl">
+            <thead>
+            <tr>
+                <th>Kolo</th>
+                <th>Ekipa 1</th>
+                <th>Ekipa 2</th>
+                <th class="col-md-2">Termin odigravanja</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].roundNumber}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName1}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName2}}</td>
+                <td>{{ upcomingFixtures[upcomingFixtures.length-1].dateGame1 }} - <b>{{ upcomingFixtures[upcomingFixtures.length-1].timeGame1 }}</b></td>
+            </tr>
+            <tr>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].roundNumber}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName3}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName4}}</td>
+                <td>{{ upcomingFixtures[upcomingFixtures.length-1].dateGame2 }} - <b>{{ upcomingFixtures[upcomingFixtures.length-1].timeGame2 }}</b></td>
+            </tr>
+            <tr>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].roundNumber}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName5}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName6}}</td>
+                <td>{{ upcomingFixtures[upcomingFixtures.length-1].dateGame3 }} - <b>{{ upcomingFixtures[upcomingFixtures.length-1].timeGame3 }}</b></td>
+            </tr>
+            <tr>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].roundNumber}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName7}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName8}}</td>
+                <td>{{ upcomingFixtures[upcomingFixtures.length-1].dateGame4 }} - <b>{{ upcomingFixtures[upcomingFixtures.length-1].timeGame4 }}</b></td>
+            </tr>
+            <tr>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].roundNumber}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName9}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName10}}</td>
+                <td>{{ upcomingFixtures[upcomingFixtures.length-1].dateGame5 }} - <b>{{ upcomingFixtures[upcomingFixtures.length-1].timeGame5 }}</b></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </fieldset>
+
+
+</form>
+<!-- END of desktop view -->
+
+
+<!-- Mobile view -->
+<form class="sky-form boxed margin-top-3 show-mobile">
+
+
+
+
+    <fieldset class="nomargin">
+
+        <p style="font-size:3vw;">Sljedeće kolo</p>
+        <table id="employeeListTable4" dt-column-defs="dtColumnDefs" datatable="ng" dt-options="dtOptions" class="table table-hover table-striped table-bordered" width="100%" ng-controller="UpcomingFixturesListCtrl">
+            <thead>
+            <tr>
+                <th>Kolo</th>
+                <th>Ekipa 1</th>
+                <th>Ekipa 2</th>
+                <th><i class="fa fa-calendar"></i></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].roundNumber}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName1}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName2}}</td>
+                <td>{{ upcomingFixtures[upcomingFixtures.length-1].dateGame1 }} - {{ upcomingFixtures[upcomingFixtures.length-1].timeGame1 }}</td>
+            </tr>
+            <tr>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].roundNumber}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName3}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName4}}</td>
+                <td>{{ upcomingFixtures[upcomingFixtures.length-1].dateGame2 }} - {{ upcomingFixtures[upcomingFixtures.length-1].timeGame2 }}</td>
+            </tr>
+            <tr>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].roundNumber}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName5}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName6}}</td>
+                <td>{{ upcomingFixtures[upcomingFixtures.length-1].dateGame3 }} - {{ upcomingFixtures[upcomingFixtures.length-1].timeGame3 }}</td>
+            </tr>
+            <tr>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].roundNumber}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName7}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName8}}</td>
+                <td>{{ upcomingFixtures[upcomingFixtures.length-1].dateGame4 }} - {{ upcomingFixtures[upcomingFixtures.length-1].timeGame4 }}</td>
+            </tr>
+            <tr>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].roundNumber}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName9}}</td>
+                <td>{{upcomingFixtures[upcomingFixtures.length-1].teamName10}}</td>
+                <td>{{ upcomingFixtures[upcomingFixtures.length-1].dateGame5 }} - {{ upcomingFixtures[upcomingFixtures.length-1].timeGame5 }}</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </fieldset>
+
+
+</form>
+<!-- END of mobile view -->
+
+
+
+<!-- Phonqpon offers -->
+
+<!--<div class="col-md-12 col-sm-12">
+    <div class="owl-carousel buttons-autohide controlls-over" data-plugin-options='{"singleItem": true, "autoPlay": true, "navigation": false, "pagination": false, "transitionStyle":"backSlide"}'>
+        <div> <img src="assets/images/demo/600x400/1-min.jpg"></div>
+        <div> <img src="assets/images/demo/600x400/2-min.jpg"></div>
+        <div> <img src="assets/images/demo/600x400/3-min.jpg"></div>
+        <div> <img src="assets/images/demo/600x400/4-min.jpg"></div>
+        <div> <img src="assets/images/demo/600x400/5-min.jpg"></div>
+        <div> <img src="assets/images/demo/600x400/6-min.jpg"></div>
+    </div>
+</div>-->
+
+<!-- JAVASCRIPT FILES -->
+<!--
+<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+<script type="text/javascript" src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+
+<script>
+	$(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});
+</script>-->

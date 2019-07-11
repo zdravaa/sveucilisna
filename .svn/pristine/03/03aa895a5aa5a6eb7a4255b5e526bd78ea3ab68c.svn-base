@@ -1,0 +1,89 @@
+<!-- Header for desktops and tablets -->
+<nav class="navbar navbar-inverse navbar-primary nobottommargin hidden-xs" role="navigation">
+    <div class="container-fluid nomargin">
+
+        <table>
+            <tr>
+                <td class="col-md-2 hidden-xs">
+                    <a class="sveucilisnaLogoNav2" ui-sref="teams.list"><img src="assets/images/sveucilisna-logo-transparent.png" class="sveucilisnaLogoNav2" alt="" /></a>
+                </td>
+                <td class="col-4 col-md-2 visible-xs">
+                    <a ui-sref="teams.list"><img src="assets/images/sveucilisna-logo-transparent.png" class="sveucilisnaLogoNavMobile" alt="" /></a>
+                </td>
+                <td class="col-3 col-md-8 hidden-xs">
+                    <p style="color:white;padding-top: 4%;font-size:2vw;">Sveučilišna malonogometna liga Sveučilišta u Mostaru</p>
+                </td>
+                <td class="col-5 col-md-8 visible-xs" style="padding-top:11%;">
+                    <p style="color:white;padding-top: 4%;font-size:2vw;">Sveučilišna malonogometna liga Sveučilišta u Mostaru</p>
+                </td>
+                <td class="col-1 col hidden-xs">
+                    <button type="button" class="btn btn-info" ui-sref="teams.list">Ekipe</button>
+                </td>
+                <td class="col-1 col hidden-xs">
+                    <button type="button" class="btn btn-info" ui-sref="players.list">Igrači</button>
+                </td>
+                <td class="col-1 col visible-xs">
+                    <button type="button" class="btn btn-info btn-xs" ui-sref="teams.list">Ekipe</button>
+                </td>
+                <td class="col-1 col visible-xs">
+                    <button type="button" class="btn btn-info btn-xs" ui-sref="players.list">Igrači</button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</nav>
+
+
+<!-- Mobile header -->
+<nav class="navbar navbar-inverse navbar-primary nomargin nopadding visible-xs" role="navigation">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="teams.list"><img src="assets/images/sveucilisna-logo.jpg" class="sveucilisnaLogoNavMobile" alt="" /></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="teams.list">Ekipe</a></li>
+                <li><a ui-sref="players.list">Igrači</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+
+
+<!--<nav class="navbar navbar-inverse navbar-primary nobottommargin" role="navigation">
+    <div class="container-fluid">
+
+        <div class="navbar-header col-md-9">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            &lt;!&ndash;<a class="navbar-brand" href="#">Brand</a>&ndash;&gt;
+            <a class="sveucilisnaLogoNav hidden-xs col" ui-sref="teams.list"><img src="assets/images/sveucilisna-logo.jpg" class="sveucilisnaLogoNav" alt="" /></a>
+            <h2 class="col-md-8">Sveučilišna malonogometna liga Sveučilišta u Mostaru</h2>
+            <a class="sveucilisnaLogoNavMobile visible-xs-block col" ui-sref="teams.list"><img src="assets/images/sveucilisna-logo.jpg" class="sveucilisnaLogoNav" alt="" /></a>
+        </div>
+
+        <div class="collapse navbar-collapse col" id="bs-example-navbar-collapse-9">
+            <ul class="nav navbar-nav">
+                <li><a href="#teams">Ekipe</a></li>
+                <li><a href="#players">Igrači</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>-->
+

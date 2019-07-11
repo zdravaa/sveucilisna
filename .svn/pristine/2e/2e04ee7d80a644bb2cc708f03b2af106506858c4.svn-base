@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://controllers.sveucilisna.fitnet.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ax21="http://models.sveucilisna.fitnet.com/xsd" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" targetNamespace="http://controllers.sveucilisna.fitnet.com">
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://models.sveucilisna.fitnet.com/xsd">
+            <xs:complexType name="Fixture">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="awayTeamGoalsScored" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="awayTeamId" nillable="true" type="xs:long"/>
+                    <xs:element minOccurs="0" name="awayTeamName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="homeTeamGoalsScored" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="homeTeamId" nillable="true" type="xs:long"/>
+                    <xs:element minOccurs="0" name="homeTeamName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="id" nillable="true" type="xs:long"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ax22="http://models.sveucilisna.fitnet.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://controllers.sveucilisna.fitnet.com">
+            <xs:import namespace="http://models.sveucilisna.fitnet.com/xsd"/>
+            <xs:element name="getFixture">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="id" type="xs:long"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getFixtureResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax22:Fixture"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="getFixtureRequest">
+        <wsdl:part name="parameters" element="ns:getFixture"/>
+    </wsdl:message>
+    <wsdl:message name="getFixtureResponse">
+        <wsdl:part name="parameters" element="ns:getFixtureResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="FixtureControllerPortType">
+        <wsdl:operation name="getFixture">
+            <wsdl:input message="ns:getFixtureRequest" wsaw:Action="urn:getFixture"/>
+            <wsdl:output message="ns:getFixtureResponse" wsaw:Action="urn:getFixtureResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="FixtureControllerSoap11Binding" type="ns:FixtureControllerPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="getFixture">
+            <soap:operation soapAction="urn:getFixture" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="FixtureControllerSoap12Binding" type="ns:FixtureControllerPortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="getFixture">
+            <soap12:operation soapAction="urn:getFixture" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="FixtureControllerHttpBinding" type="ns:FixtureControllerPortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="getFixture">
+            <http:operation location="getFixture"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="FixtureController">
+        <wsdl:port name="FixtureControllerHttpSoap11Endpoint" binding="ns:FixtureControllerSoap11Binding">
+            <soap:address location="http://localhost:8080/api/v1/FixtureController"/>
+        </wsdl:port>
+        <wsdl:port name="FixtureControllerHttpSoap12Endpoint" binding="ns:FixtureControllerSoap12Binding">
+            <soap12:address location="http://localhost:8080/api/v1/FixtureController"/>
+        </wsdl:port>
+        <wsdl:port name="FixtureControllerHttpEndpoint" binding="ns:FixtureControllerHttpBinding">
+            <http:address location="http://localhost:8080/api/v1/FixtureController"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

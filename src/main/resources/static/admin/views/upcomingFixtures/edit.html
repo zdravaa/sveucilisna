@@ -1,0 +1,273 @@
+<p class="lead">
+    <a ui-sref="^.list" class="btn btn-large btn-default">
+        <i class="glyphicon glyphicon-arrow-left"></i>
+    </a>
+    <a ng-click="save()" href="" class="btn btn-default pull-right">
+        <i class="glyphicon glyphicon-floppy-save"></i>
+    </a>
+</p>
+
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2">
+        <input type="number" placeholder="roundNumber" ng-model="upcomingFixtures.roundNumber">
+    </div>
+</div>
+<br>
+
+<!-- Game 1 -->
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2">
+        <input type="text" ng-model="upcomingFixtures.timeGame1" placeholder="Vrijeme odigravanja"> <input type="text" ng-model="upcomingFixtures.dateGame1" placeholder="Datum odigravanja">
+    </div>
+    <div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <select class="form-control" id="teamName1" name="teamName1" ng-model="upcomingFixtures.teamName1">
+                <option value="">--- Odaberi fakultet ---</option>
+                <option value="FSRE">FSRE</option>
+                <option value="EF">EF</option>
+                <option value="FF">FF</option>
+                <option value="GF">GF</option>
+                <option value="PF">PF</option>
+                <option value="MF">MF</option>
+                <option value="FZS">FZS</option>
+                <option value="APTF">APTF</option>
+                <option value="SZ">SZ</option>
+                <option value="SC">SC</option>
+                <option value="FPMOZ">FPMOZ</option>
+            </select>
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <select class="form-control" id="teamName2" name="teamName2" ng-model="upcomingFixtures.teamName2">
+                <option value="">--- Odaberi fakultet ---</option>
+                <option value="FSRE">FSRE</option>
+                <option value="EF">EF</option>
+                <option value="FF">FF</option>
+                <option value="GF">GF</option>
+                <option value="PF">PF</option>
+                <option value="MF">MF</option>
+                <option value="FZS">FZS</option>
+                <option value="APTF">APTF</option>
+                <option value="SZ">SZ</option>
+                <option value="SC">SC</option>
+                <option value="FPMOZ">FPMOZ</option>
+            </select>
+        </div>
+    </div>
+</div>
+<br>
+
+<!-- Game 2 -->
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2">
+        <input type="text" ng-model="upcomingFixtures.timeGame2" placeholder="Vrijeme odigravanja"> <input type="text" ng-model="upcomingFixtures.dateGame2" placeholder="Datum odigravanja">
+    </div>
+    <div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <select class="form-control" id="teamName3" name="teamName3" ng-model="upcomingFixtures.teamName3">
+                <option value="">--- Odaberi fakultet ---</option>
+                <option value="FSRE">FSRE</option>
+                <option value="EF">EF</option>
+                <option value="FF">FF</option>
+                <option value="GF">GF</option>
+                <option value="PF">PF</option>
+                <option value="MF">MF</option>
+                <option value="FZS">FZS</option>
+                <option value="APTF">APTF</option>
+                <option value="SZ">SZ</option>
+                <option value="SC">SC</option>
+                <option value="FPMOZ">FPMOZ</option>
+            </select>
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <select class="form-control" id="teamName4" name="teamName4" ng-model="upcomingFixtures.teamName4">
+                <option value="">--- Odaberi fakultet ---</option>
+                <option value="FSRE">FSRE</option>
+                <option value="EF">EF</option>
+                <option value="FF">FF</option>
+                <option value="GF">GF</option>
+                <option value="PF">PF</option>
+                <option value="MF">MF</option>
+                <option value="FZS">FZS</option>
+                <option value="APTF">APTF</option>
+                <option value="SZ">SZ</option>
+                <option value="SC">SC</option>
+                <option value="FPMOZ">FPMOZ</option>
+            </select>
+        </div>
+    </div>
+</div>
+<br>
+
+<!-- Game 3 -->
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2">
+        <input type="text" ng-model="upcomingFixtures.timeGame3" placeholder="Vrijeme odigravanja"> <input type="text" ng-model="upcomingFixtures.dateGame3" placeholder="Datum odigravanja">
+    </div>
+    <div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <select class="form-control" id="teamName5" name="teamName5" ng-model="upcomingFixtures.teamName5">
+                <option value="">--- Odaberi fakultet ---</option>
+                <option value="FSRE">FSRE</option>
+                <option value="EF">EF</option>
+                <option value="FF">FF</option>
+                <option value="GF">GF</option>
+                <option value="PF">PF</option>
+                <option value="MF">MF</option>
+                <option value="FZS">FZS</option>
+                <option value="APTF">APTF</option>
+                <option value="SZ">SZ</option>
+                <option value="SC">SC</option>
+                <option value="FPMOZ">FPMOZ</option>
+            </select>
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <select class="form-control" id="teamName6" name="teamName6" ng-model="upcomingFixtures.teamName6">
+                <option value="">--- Odaberi fakultet ---</option>
+                <option value="FSRE">FSRE</option>
+                <option value="EF">EF</option>
+                <option value="FF">FF</option>
+                <option value="GF">GF</option>
+                <option value="PF">PF</option>
+                <option value="MF">MF</option>
+                <option value="FZS">FZS</option>
+                <option value="APTF">APTF</option>
+                <option value="SZ">SZ</option>
+                <option value="SC">SC</option>
+                <option value="FPMOZ">FPMOZ</option>
+            </select>
+        </div>
+    </div>
+</div>
+<br>
+
+<!-- Game 4 -->
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2">
+        <input type="text" ng-model="upcomingFixtures.timeGame4" placeholder="Vrijeme odigravanja"> <input type="text" ng-model="upcomingFixtures.dateGame4" placeholder="Datum odigravanja">
+    </div>
+    <div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <select class="form-control" id="teamName7" name="teamName7" ng-model="upcomingFixtures.teamName7">
+                <option value="">--- Odaberi fakultet ---</option>
+                <option value="FSRE">FSRE</option>
+                <option value="EF">EF</option>
+                <option value="FF">FF</option>
+                <option value="GF">GF</option>
+                <option value="PF">PF</option>
+                <option value="MF">MF</option>
+                <option value="FZS">FZS</option>
+                <option value="APTF">APTF</option>
+                <option value="SZ">SZ</option>
+                <option value="SC">SC</option>
+                <option value="FPMOZ">FPMOZ</option>
+            </select>
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <select class="form-control" id="teamName8" name="teamName8" ng-model="upcomingFixtures.teamName8">
+                <option value="">--- Odaberi fakultet ---</option>
+                <option value="FSRE">FSRE</option>
+                <option value="EF">EF</option>
+                <option value="FF">FF</option>
+                <option value="GF">GF</option>
+                <option value="PF">PF</option>
+                <option value="MF">MF</option>
+                <option value="FZS">FZS</option>
+                <option value="APTF">APTF</option>
+                <option value="SZ">SZ</option>
+                <option value="SC">SC</option>
+                <option value="FPMOZ">FPMOZ</option>
+            </select>
+        </div>
+    </div>
+</div>
+<br>
+
+<!-- Game 5 -->
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2">
+        <input type="text" ng-model="upcomingFixtures.timeGame5" placeholder="Vrijeme odigravanja"> <input type="text" ng-model="upcomingFixtures.dateGame5" placeholder="Datum odigravanja">
+    </div>
+    <div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <select class="form-control" id="teamName9" name="teamName9" ng-model="upcomingFixtures.teamName9">
+                <option value="">--- Odaberi fakultet ---</option>
+                <option value="FSRE">FSRE</option>
+                <option value="EF">EF</option>
+                <option value="FF">FF</option>
+                <option value="GF">GF</option>
+                <option value="PF">PF</option>
+                <option value="MF">MF</option>
+                <option value="FZS">FZS</option>
+                <option value="APTF">APTF</option>
+                <option value="SZ">SZ</option>
+                <option value="SC">SC</option>
+                <option value="FPMOZ">FPMOZ</option>
+            </select>
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <select class="form-control" id="teamName10" name="teamName10" ng-model="upcomingFixtures.teamName10">
+                <option value="">--- Odaberi fakultet ---</option>
+                <option value="FSRE">FSRE</option>
+                <option value="EF">EF</option>
+                <option value="FF">FF</option>
+                <option value="GF">GF</option>
+                <option value="PF">PF</option>
+                <option value="MF">MF</option>
+                <option value="FZS">FZS</option>
+                <option value="APTF">APTF</option>
+                <option value="SZ">SZ</option>
+                <option value="SC">SC</option>
+                <option value="FPMOZ">FPMOZ</option>
+            </select>
+        </div>
+    </div>
+</div>
+<br>
+
+<!-- Game 6 -->
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2">
+        <input type="text" ng-model="upcomingFixtures.timeGame6" placeholder="Vrijeme odigravanja"> <input type="text" ng-model="upcomingFixtures.dateGame6" placeholder="Datum odigravanja">
+    </div>
+    <div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <select class="form-control" id="teamName11" name="teamName11" ng-model="upcomingFixtures.teamName11">
+                <option value="">--- Odaberi fakultet ---</option>
+                <option value="FSRE">FSRE</option>
+                <option value="EF">EF</option>
+                <option value="FF">FF</option>
+                <option value="GF">GF</option>
+                <option value="PF">PF</option>
+                <option value="MF">MF</option>
+                <option value="FZS">FZS</option>
+                <option value="APTF">APTF</option>
+                <option value="SZ">SZ</option>
+                <option value="SC">SC</option>
+                <option value="FPMOZ">FPMOZ</option>
+            </select>
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <select class="form-control" id="teamName12" name="teamName12" ng-model="upcomingFixtures.teamName12">
+                <option value="">--- Odaberi fakultet ---</option>
+                <option value="FSRE">FSRE</option>
+                <option value="EF">EF</option>
+                <option value="FF">FF</option>
+                <option value="GF">GF</option>
+                <option value="PF">PF</option>
+                <option value="MF">MF</option>
+                <option value="FZS">FZS</option>
+                <option value="APTF">APTF</option>
+                <option value="SZ">SZ</option>
+                <option value="SC">SC</option>
+                <option value="FPMOZ">FPMOZ</option>
+            </select>
+        </div>
+    </div>
+</div>
+

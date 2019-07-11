@@ -1,0 +1,44 @@
+<p class="lead">
+    Players
+    <a ui-sref="players.add" href="" class="btn btn-default pull-right">
+        <i class="glyphicon glyphicon-plus-sign"></i>
+    </a>
+</p>
+
+<table id="employeeListTable" dt-column-defs="dtColumnDefs" datatable="ng" dt-options="dtOptions" class="table table-hover table-striped table-bordered" width="100%" ng-controller="PlayersListCtrl">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Ime i prezime</th>
+        <th>Fakultet</th>
+        <th>Odigrane utakmice</th>
+        <th class="col-md-2">Zabijeni golovi</th>
+        <th>Opcije</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="player in players | orderBy:'team.teamName'">
+        <td>{{$index +1}}</td>
+        <td>{{ player.firstName }} {{ player.lastName }}</td>
+        <td title="teamName">{{ player.team.teamName }}</td>
+        <td>{{ player.gamesPlayed }}</td>
+        <td>{{ player.goalsScored }}</td>
+        <td><div class="pull-right btn-group">
+            <a class="btn btn-default btn-xs" ui-sref="players.edit({id:player.id})">
+                <i class="glyphicon glyphicon-pencil"></i>
+            </a>
+            <a class="btn btn-default btn-xs" ng-click="delete(player)">
+                <i class="glyphicon glyphicon-trash"></i>
+            </a>
+        </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+<div ng-hide="players.length">
+    <h4>
+        <a ui-sref="players.add" href="">You have no players, add some!</a>
+    </h4>
+</div>

@@ -1,0 +1,83 @@
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+    <!-- Team list table -->
+    <div class="col-xl-10 col-lg-8 col-md-7 col-sm-12 col-12 show">
+        <form class="sky-form boxed margin-top-3">
+
+
+
+            <fieldset class="nomargin">
+
+                <table id="employeeListTable" dt-column-defs="dtColumnDefs" datatable="ng" dt-options="dtOptions" class="table table-hover table-striped table-bordered customTable" width="100%">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Fakultet</th>
+                        <th>Odigrani susreti</th>
+                        <th>Zabijeni golovi</th>
+                        <th>Primljeni golovi</th>
+                        <th>Gol razlika</th>
+                        <th>Bodovi</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="team in teams | orderBy:['-points','-goalsScored-goalsConceded']" ui-sref="teams.item({id:team.id})">
+                        <td>{{$index +1}}</td>
+                        <td>{{ team.teamName }}</td>
+                        <td>{{ team.gamesPlayed }}</td>
+                        <td>{{ team.goalsScored }}</td>
+                        <td>{{ team.goalsConceded }}</td>
+                        <td>{{team.goalsScored-team.goalsConceded}}</td>
+                        <td>{{ team.points }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+
+        </form>
+    </div>
+    <!-- END of team list table -->
+
+
+
+    <!-- Team list table mobile view-->
+    <div class="col-xl-10 col-lg-8 col-md-7 col-sm-12 col-12 show-mobile">
+        <form class="sky-form boxed margin-top-3">
+
+
+
+            <fieldset class="nomargin">
+
+                <table id="employeeListTableM" dt-column-defs="dtColumnDefs" datatable="ng" dt-options="dtOptions" class="table table-hover table-striped table-bordered" width="100%">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Fakultet</th>
+                        <th>OS</th>
+                        <th>G</th>
+                        <th>B</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="team in teams | orderBy:['-points','-goalsScored-goalsConceded']" ui-sref="teams.item({id:team.id})">
+                        <td>{{$index +1}}</td>
+                        <td>{{ team.teamName }}</td>
+                        <td>{{ team.gamesPlayed }}</td>
+                        <td>{{ team.goalsScored }} : {{ team.goalsConceded }}</td>
+                        <td>{{ team.points }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+
+        </form>
+    </div>
+    <!-- END of team list table mobile view -->
+
+    <div class="col-xl-2 col-lg-4 col-md-5 col-sm-12 col-12">
+        <!-- sidebar -->
+        <div ng-include="'public/views/sidebar-right.html'"></div>
+
+    </div>
+</div>
+

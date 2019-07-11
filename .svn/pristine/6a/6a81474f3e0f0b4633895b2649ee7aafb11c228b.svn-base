@@ -1,0 +1,157 @@
+<p class="lead">
+    <b>Utakmice</b>
+    <a ui-sref="fixtures.add" href="" class="btn btn-primary pull-right">
+        Unesi rezultat <i class="glyphicon glyphicon-plus-sign"></i>
+    </a>
+    <a ui-sref="upcomingFixtures.add" href="" class="btn btn-info pull-right">
+        Unesi parove sljedećeg kola  <i class="glyphicon glyphicon-plus-sign"></i>
+    </a>
+</p>
+
+<!--<div ng-controller="PlayersListCtrl">
+
+
+
+    <ul>
+        <li ng-repeat="fixture in fixtures | filter:fixture">
+            Domaćin: <b>{{fixture.homeTeamName}}</b> , Gost: <b>{{fixture.awayTeamName}}</b> , Rezultat: <b>{{ fixture.homeTeamGoalsScored }}:{{ fixture.awayTeamGoalsScored }}</b>
+        </li>
+    </ul>
+
+</div>-->
+
+<div>
+
+    <div class="row">
+            <div class="col-md-12">
+
+                <p>Dohvati utakmicu po nazivu domaćeg tima:</p>
+
+                <p><input type="text" ng-model="fixture.homeTeamName"></p>
+                <button type="button" class="btn btn-primary" ng-click="search()" data-toggle="modal" data-target="#myModalRules">Search</button>
+
+                <hr>
+                <!--<p>Dohvati utakmicu po ID-u:</p>
+
+                <p><input type="number" ng-model="fixture.id"></p>
+                <button type="button" class="btn btn-primary" ng-click="search()" data-toggle="modal" data-target="#myModalRules">Search</button>
+
+                <button type="button" class="btn btn-blue" ng-click="clear2()">Clear input</button>-->
+
+
+                <!--<table id="homeTeamList" dt-column-defs="dtColumnDefs" datatable="ng" dt-options="dtOptions" class="table table-hover table-striped table-bordered" width="100%" ng-show="IsVisible">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Home Team</th>
+                        <th>Away team</th>
+                        <th class="col-md-2">Result</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="fixture in fixtures | filter:fixture">
+                        <td>{{fixture.id}}</td>
+                        <td>{{fixture.homeTeamName}}</td>
+                        <td>{{fixture.awayTeamName}}</td>
+                        <td>{{ fixture.homeTeamGoalsScored }}:{{ fixture.awayTeamGoalsScored }}</td>
+                    </tr>
+                    </tbody>
+                </table>-->
+            </div>
+    </div>
+</div>
+
+<div ng-hide="fixtures.length">
+    <h4>
+        <a ui-sref="fixtures.add" href="">You have no fixtures, add some!</a>
+    </h4>
+</div>
+
+
+
+<div id="myModalRules" class="modal fade  margin-top-200" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content padding-15">
+
+            <!-- Modal Header -->
+            <div class="modal-header margin-bottom-30">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="close1()"><span aria-hidden="true"> &times;</span></button>
+                <h4 class="modal-title" id="myModalLabelRules">Rules</h4>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="clearfix">
+
+                <table id="teamListR" dt-column-defs="dtColumnDefs" datatable="ng" dt-options="dtOptions" class="table table-hover table-striped table-bordered" width="100%" ng-show="IsVisible">
+                    <thead>
+                    <tr>
+                        <th>Round number</th>
+                        <th>Home Team</th>
+                        <th>Away team</th>
+                        <th class="col-md-2">Result</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="fixture in fixtures | filter:fixture">
+                        <td>{{fixture.roundNumber}}</td>
+                        <td>{{fixture.homeTeamName}}</td>
+                        <td>{{fixture.awayTeamName}}</td>
+                        <td>{{ fixture.homeTeamGoalsScored }}:{{ fixture.awayTeamGoalsScored }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+
+            <button class="btn btn-teal btn-lg btn-block" data-dismiss="modal" ng-click="close1()">Close</button>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<div id="myModalID" class="modal fade  margin-top-200" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content padding-15">
+
+            <!-- Modal Header -->
+            <div class="modal-header margin-bottom-30">
+                <button type="button" class="close" data-dismiss="modal2" aria-label="Close" ng-click="clear2()"><span aria-hidden="true"> &times;</span></button>
+                <h4 class="modal-title" id="myModalLabelRules2">Rules</h4>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="clearfix">
+
+                <table id="teamListID" dt-column-defs="dtColumnDefs" datatable="ng" dt-options="dtOptions" class="table table-hover table-striped table-bordered" width="100%" ng-show="IsVisible">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Home Team</th>
+                        <th>Away team</th>
+                        <th class="col-md-2">Result</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="fixture in fixtures | filter:fixture">
+                        <td>{{fixture.id}}</td>
+                        <td>{{fixture.homeTeamName}}</td>
+                        <td>{{fixture.awayTeamName}}</td>
+                        <td>{{ fixture.homeTeamGoalsScored }}:{{ fixture.awayTeamGoalsScored }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+
+            <button class="btn btn-teal btn-lg btn-block" data-dismiss="modal2" ng-click="clear2()">Close</button>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+<!-- Desktop view -->
+<div class="col-xl-10 col-lg-8 col-md-7 col-sm-12 col-12 show">
+    <form class="sky-form boxed margin-top-3">
+
+
+
+        <fieldset class="nomargin">
+
+            <table id="employeeListTable" dt-column-defs="dtColumnDefs" datatable="ng" dt-options="dtOptions" class="table table-hover table-striped table-bordered customTable" width="100%" ng-controller="PlayersListCtrl">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Ime i prezime</th>
+                    <th>Fakultet</th>
+                    <th>Odigrane utakmice</th>
+                    <th class="col-md-2">Zabijeni golovi</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="player in players | orderBy:['-goalsScored','gamesPlayed'] | limitTo: 20">
+                    <td>{{$index +1}}</td>
+                    <td>{{ player.firstName }} {{ player.lastName }}</td>
+                    <td>{{ player.team.teamName }}</td>
+                    <td>{{ player.gamesPlayed }}</td>
+                    <td>{{ player.goalsScored }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </fieldset>
+
+    </form>
+</div>
+<!-- END OF desktop view -->
+
+
+<!-- Mobile view -->
+<div class="col-xl-10 col-lg-8 col-md-7 col-sm-12 col-12 show-mobile">
+    <form class="sky-form boxed margin-top-3">
+
+
+
+        <fieldset class="nomargin">
+
+            <table id="employeeListTable1" dt-column-defs="dtColumnDefs" datatable="ng" dt-options="dtOptions" class="table table-hover table-striped table-bordered" width="100%" ng-controller="PlayersListCtrl">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Igrač</th>
+                    <th>Fakultet</th>
+                    <th class="col-md-2">G</th>
+                    <th>OS</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="player in players | orderBy:['-goalsScored','gamesPlayed']">
+                    <td>{{$index +1}}</td>
+                    <td>{{ player.firstName }} {{ player.lastName }}</td>
+                    <td>{{ player.team.teamName }}</td>
+                    <td>{{ player.goalsScored }}</td>
+                    <td>{{ player.gamesPlayed }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </fieldset>
+
+    </form>
+</div>
+<!-- END OF mobile view -->
+
+
+<div class="col-xl-2 col-lg-4 col-md-5 col-sm-12 col-12">
+    <!-- sidebar -->
+    <div ng-include="'public/views/sidebar-right.html'"></div>
+</div>

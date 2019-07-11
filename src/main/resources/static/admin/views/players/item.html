@@ -1,0 +1,20 @@
+<p class="lead">
+    <a ui-sref="^.list" class="btn btn-large btn-default">
+        <i class="glyphicon glyphicon-arrow-left"></i>
+    </a>
+    <a href="#/players/edit/{{player.id}}" class="btn btn-default pull-right">
+        <i class="glyphicon glyphicon-pencil"></i>
+    </a>
+</p>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        {{player.firstName}}
+    </div>
+    <div class="panel-body">
+        <pre>{{player.lastName}}</pre>
+    </div>
+    <div class="panel-body">
+        <pre>{{player.faculty}}</pre>
+    </div>
+</div>

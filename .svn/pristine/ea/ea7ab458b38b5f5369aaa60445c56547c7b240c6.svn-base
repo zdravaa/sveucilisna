@@ -1,0 +1,31 @@
+<p class="lead">
+    <a ui-sref="^.list" class="btn btn-large btn-default">
+        <i class="glyphicon glyphicon-arrow-left"></i>
+    </a>
+    <a ng-click="save()" href="" class="btn btn-default pull-right">
+        <i class="glyphicon glyphicon-floppy-save"></i>
+    </a>
+</p>
+
+<div class="form-group">
+    <input class="form-control" id="firstName" name="firstName" ng-model="player.firstName" placeholder="name">
+</div>
+<div class="form-group">
+    <input class="form-control" id="lastName" name="lastName" ng-model="player.lastName" placeholder="surname">
+</div>
+<div class="form-group">
+    <label>Fakultet *</label>
+    <select class="form-control" id="teamName" name="teamName" ng-model="player.team">
+        <option value="">--- Odaberi fakultet ---</option>
+        <option ng-repeat="team in teams" value="{{ team }}">{{ team.teamName }}</option>
+    </select>
+</div>
+<div class="form-group">
+    <input class="form-control" id="goalsScored" name="goalsScored" ng-model="player.goalsScored" placeholder="Goals scored">
+</div>
+<div class="form-group">
+    <input class="form-control" id="yellowCards" name="yellowCards" ng-model="player.yellowCards" placeholder="Yellow cards">
+</div>
+<div class="form-group">
+    <input class="form-control" id="redCards" name="redCards" ng-model="player.redCards" placeholder="Red cards">
+</div>

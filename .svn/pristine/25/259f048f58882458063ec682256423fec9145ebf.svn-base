@@ -1,0 +1,31 @@
+<p class="lead">
+    <a ui-sref="^.list" class="btn btn-large btn-default">
+        <i class="glyphicon glyphicon-arrow-left"></i>
+    </a>
+    <a ng-click="save()" href="" class="btn btn-default pull-right">
+        <i class="glyphicon glyphicon-floppy-save"></i>
+    </a>
+</p>
+
+<div class="form-group">
+    <label><b>Fakultet</b></label>
+    <input class="form-control" id="teamName" name="teamName" ng-model="team.teamName" placeholder="Fakultet">
+</div>
+<div class="form-group">
+    <label><b>Bodovi</b></label>
+    <input class="form-control" id="points" name="points" ng-model="team.points" placeholder="Bodovi">
+</div>
+<div class="form-group">
+    <label><b>Zabijeni golovi</b></label>
+    <input class="form-control" id="goalsScored" name="goalsScored" ng-model="team.goalsScored" placeholder="Zabijeni golovi">
+</div>
+<div class="form-group">
+    <label><b>Primljeni golovi</b></label>
+    <input class="form-control" id="goalsConceded" name="goalsConceded" ng-model="team.goalsConceded" placeholder="Primljeni golovi">
+</div>
+<div class="form-group">
+    <label><b>Broj odigranih utakmica</b></label>
+    <input class="form-control" id="gamesPlayed" name="gamesPlayed" ng-model="team.gamesPlayed" placeholder="Broj odigranih utakmica">
+</div>
+
+<hr>

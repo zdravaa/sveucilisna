@@ -1,0 +1,48 @@
+<p class="lead">
+    Teams
+    <a ui-sref="teams.add" href="" class="btn btn-default pull-right">
+        <i class="glyphicon glyphicon-plus-sign"></i>
+    </a>
+</p>
+
+
+<table id="teamsListTable" dt-column-defs="dtColumnDefs" datatable="ng" dt-options="dtOptions" class="table table-hover table-striped table-bordered" width="100%">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Fakultet</th>
+        <th>Odigrane utakmice</th>
+        <th>Zabijeni golovi</th>
+        <th>Primljeni golovi</th>
+        <th>Gol razlika</th>
+        <th>Bodovi</th>
+        <th>Opcije</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="team in teams | orderBy:['-points','-goalsScored-goalsConceded']">
+        <td>{{$index +1}}</td>
+        <td>{{ team.teamName }}</td>
+        <td>{{ team.gamesPlayed }}</td>
+        <td>{{ team.goalsScored }}</td>
+        <td>{{ team.goalsConceded }}</td>
+        <td>{{team.goalsScored-team.goalsConceded}}</td>
+        <td>{{ team.points }}</td>
+        <td><div class="pull-right btn-group">
+            <a class="btn btn-default btn-xs" ui-sref="teams.edit({id:team.id})">
+                <i class="glyphicon glyphicon-pencil"></i>
+            </a>
+            <a class="btn btn-default btn-xs" ng-click="delete(team)">
+                <i class="glyphicon glyphicon-trash"></i>
+            </a>
+        </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div ng-hide="teams.length">
+    <h4>
+        <a ui-sref="teams.add" href="">You have no teams, add some!</a>
+    </h4>
+</div>

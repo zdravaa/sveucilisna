@@ -1,0 +1,85 @@
+
+    <div class="row nomargin footer-padding">
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+            <a href="http://fitnet.io/" target="_blank">
+
+                <img class="box-img" src="assets/images/Fitnet_logo_white_background.png" alt="" />
+
+            </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+            <a href="https://www.facebook.com/hercegovacko.pivo/" target="_blank">
+
+                <img class="box-img" src="assets/images/hercegovka-logo.jpg" alt="" />
+
+            </a>
+        </div>
+
+        <!-- Phonqpon offers -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+            <div class="col-md-12 col-sm-12">
+                <div class="owl-carousel buttons-autohide controlls-over" data-plugin-options='{"singleItem": true, "autoPlay": true, "navigation": false, "pagination": false, "transitionStyle":"backSlide"}'>
+                    <div>
+                        <a target="_blank" href="http://phon.qpon/#/offer-detail/1267">
+                            <img class="box-img" src="assets/images/novisad1.png">
+                        </a>
+                    </div>
+
+                    <div>
+                        <a target="_blank" href="http://phon.qpon/#/offer-detail/1204">
+                            <img class="box-img" src="assets/images/beograd.png">
+                        </a>
+                    </div>
+
+                    <div>
+                        <a target="_blank" href="http://phon.qpon/#/offer-detail/712">
+                            <!--<b class="image-top-left" style="color:black;">2 noćenja u Vodicama za dvoje u prekrasnim apartmanima Tamaris po specijalnoj cijeni!</b>-->
+                            <img class="box-img" src="assets/images/vodice.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2">
+            <a href="http://crosig.ba/" target="_blank">
+
+                <img class="box-img" src="assets/images/logo-croatia-osiguranje.png" alt="" />
+
+            </a>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 pull-right">
+
+            <h2>KONTAKT</h2>
+            <p>Julio Zelenika - 063 / 794 898</p>
+            <p>Mateo Bevanda - 063 / 155 333</p>
+
+            <h4 class="letter-spacing-1">Pratite nas na:</h4>
+
+            <div class="margin-top-20">
+                <a href="https://www.facebook.com/SveucilisnamalonogometnaligaSveucilisteuMostaru/" target="_blank" class="social-icon social-icon-border social-facebook pull-left" data-toggle="tooltip" data-placement="top" title="Facebook">
+
+                    <i class="icon-facebook"></i>
+                    <i class="icon-facebook"></i>
+                </a>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+<!-- JAVASCRIPT FILES -->
+<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+<script type="text/javascript" src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+
+<script>
+	$(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});
+</script>
